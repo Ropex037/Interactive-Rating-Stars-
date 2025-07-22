@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*{
+      margin: 0;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+  body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+
+:root{
+    --empty-star:gray;
+    --full-star:rgb(223, 141, 223);
+}
+
+.star-rating {
+  display: inline-flex;
+  
+  font-size: 3rem;
+  unicode-bidi: bidi-override;
+  cursor: pointer;
+}
+.star-rating span {
+  color: var(--empty-star);
+  transition: color 0.2s;
+  padding: 0 5px;
+}
+
+.star-rating span.hovered,
+.star-rating span.selected {
+  color: var(--full-star);
+}
